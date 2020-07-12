@@ -1,0 +1,25 @@
+// Sub-projects
+subprojects {
+
+    // Plugins
+    apply plugin: 'java'
+
+    // Group Id
+    group 'com.github.longkerdandy'
+
+    // Version
+    version '0.1.0-SNAPSHOT'
+
+    // JDK
+    sourceCompatibility = 1.11
+
+    // Encoding
+    tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+
+    // Repositories
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenLocal()
+        mavenCentral()
+    }
+}
